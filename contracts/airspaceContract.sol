@@ -36,7 +36,8 @@ contract AirspaceAuction {
         emit BidPlaced(msg.sender, msg.value);
     }
 
-    function endAuction() external onlyOwner {
+    //function endAuction() external onlyOwner {
+    function endAuction() {
         require(highestBidder != address(0), "Auction has not ended yet");
 
         // Transfer the funds to the owner
